@@ -201,9 +201,9 @@ var initialWeatherForecast = {
         {icon: 'partly-cloudy-day', temperatureMax: 42, temperatureMin: 40}
       ]
     }
-  };
+  };*/
   // Uncomment the line below to test with the provided fake data
-   //app.updateForecastCard(fakeForecast);*/
+   app.updateForecastCard(initialWeatherForecast);
 
 })();
 
