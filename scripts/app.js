@@ -229,7 +229,6 @@
     ];
     app.saveSelectedCities();
   }
-
   // Add feature check for Service Workers here
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
