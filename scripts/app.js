@@ -205,5 +205,41 @@ var initialWeatherForecast = {
   // Uncomment the line below to test with the provided fake data
    app.updateForecastCard(initialWeatherForecast);
 
+
+// Save list of cities to localStorage, see note below about localStorage.
+app.saveSelectedCities = function() {
+  var selectedCities = JSON.stringify(app.selectedCities);
+  // IMPORTANT: See notes about use of localStorage.
+  localStorage.selectedCities = selectedCities;
+};
+
+
+/****************************************************************************   
+ *
+ * Code required to start the app
+ *
+ * NOTE: To simplify this getting started guide, we've used localStorage.
+ *   localStorage is a synchronous API and has serious performance
+ *   implications. It should not be used in production applications!
+ *   Instead, check out IDB (https://www.npmjs.com/package/idb) or
+ *   SimpleDB (https://gist.github.com/inexorabletash/c8069c042b734519680c)
+ *
+ ****************************************************************************/
+
+app.selectedCities = localStorage.selectedCities;
+if (app.selectedCities) {
+  app.selectedCities = JSON.parse(app.selectedCities);
+  app.selectedCities.forEach(function(city) {
+    app.getForecast(city.key, city.label);
+  });
+} else {
+  app.updateForecastCard(initialWeatherForecast);
+  app.selectedCities = [
+    {key: initialWeatherForecast.key, label: initialWeatherForecast.label}
+  ];
+  app.saveSelectedCities();
+}
+
+
 })();
 
