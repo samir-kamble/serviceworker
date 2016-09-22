@@ -120,12 +120,12 @@
     card.querySelector('.current .temperature .value').textContent =
       Math.round(current.temp);
     card.querySelector('.current .sunrise').textContent = sunrise;
-    card.querySelector('.current .sunset').textContent = sunset;*/
+    card.querySelector('.current .sunset').textContent = sunset;
     card.querySelector('.current .humidity').textContent =
       Math.round(humidity) + '%';
     card.querySelector('.current .wind .value').textContent =
       Math.round(wind.speed);
-    card.querySelector('.current .wind .direction').textContent = wind.direction;
+    card.querySelector('.current .wind .direction').textContent = wind.direction;*/
     var nextDays = card.querySelectorAll('.future .oneday');
     var today = new Date();
     today = today.getDay();
