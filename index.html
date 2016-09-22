@@ -15,10 +15,10 @@
     <button id="butAdd" class="headerButton"></button>
   </header>
 
-  <main class="main" hidden>
-    <!-- Insert forecast-card.html here -->
+   <main class="main">
     <div class="card cardTemplate weather-forecast" hidden>
       <div class="city-key" hidden></div>
+      <div class="card-last-updated" hidden></div>
       <div class="location"></div>
       <div class="date"></div>
       <div class="description"></div>
@@ -30,16 +30,14 @@
           </div>
         </div>
         <div class="description">
-          <div class="feels-like">
-            <span class="value"></span><span class="scale">°F</span>
-          </div>
-          <div class="precip"></div>
           <div class="humidity"></div>
           <div class="wind">
             <span class="value"></span>
             <span class="scale">mph</span>
-            <span class="direction"></span>
+            <span class="direction"></span>°
           </div>
+          <div class="sunrise"></div>
+          <div class="sunset"></div>
         </div>
       </div>
       <div class="future">
