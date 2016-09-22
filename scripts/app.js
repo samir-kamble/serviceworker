@@ -1,13 +1,5 @@
 
 (function() {
-  
-  if('serviceWorker' in navigator) {  
-  navigator.serviceWorker  
-           .register('../sw.js')  
-           .then(function() { console.log('Service Worker Registered'); });  
-  }
-  
-  
   'use strict';
 
   // Insert injected weather forecast here
@@ -225,7 +217,7 @@
   // Add feature check for Service Workers here
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
-             .register('/service-worker.js')
+             .register('../sw.js')
              .then(function() { console.log('Service Worker Registered'); });
   }
 
