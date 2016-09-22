@@ -113,12 +113,12 @@
       }
     }
     cardLastUpdatedElem.textContent = data.created;
-
-    /*card.querySelector('.description').textContent = current.text;
-    card.querySelector('.date').textContent = current.date;
     card.querySelector('.current .icon').classList.add(app.getIconClass(current.code));
     card.querySelector('.current .temperature .value').textContent =
       Math.round(current.temp);
+    /*card.querySelector('.description').textContent = current.text;
+    card.querySelector('.date').textContent = current.date;
+    
     card.querySelector('.current .sunrise').textContent = sunrise;
     card.querySelector('.current .sunset').textContent = sunset;
     card.querySelector('.current .humidity').textContent =
